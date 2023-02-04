@@ -69,6 +69,7 @@ app.post("/", function(req,res){
     contact1.save(function(err){
         if(!err){
             console.log("Your work is saved.");
+          res.sendFile(__dirname+"/index.html");
         }
     })}
 })
