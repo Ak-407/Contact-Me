@@ -48,32 +48,8 @@ app.post("/", function(req,res){
         }
     })}
 })
-app.get("/", function(req,res){
-    res.sendFile(__dirname+"/index2.html");    
-});
-app.post("/", function(req,res){
-    const name = req.body.name;
-    const email = req.body.email;
-    const messege = req.body.messege;
-    console.log(name);
-    console.log(email);
-    console.log(messege);
-     
-    const contact1 = new contact({
-        name:name,
-        email:email,
-        messege:messege
-    });
-    if(name.length===0 || email.length===0){
-        res.sendFile(__dirname+"/index2.html");   
-    }else{
-    contact1.save(function(err){
-        if(!err){
-            console.log("Your work is saved.");
-          res.sendFile(__dirname+"/index.html");
-        }
-    })}
-})
+
+
 
 app.listen("3000", function(req,res){
     console.log("port is under 3000");
