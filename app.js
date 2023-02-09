@@ -4,7 +4,7 @@ const { default: mongoose } = require("mongoose");
 const app = express();
 
 mongoose.set('strictQuery', true);
-// mongoose.connect("mongodb://localhost:27017/ContactAmaan", {useNewUrlParser:true} );
+// mongoose.connect("mongodb://localhost:27017/ContactAmaan", {useNewUrlParser:true} 
 mongoose.connect("mongodb+srv://jsamaan:amaan123@cluster0.vz55wc0.mongodb.net/jsamaan?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true });
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
